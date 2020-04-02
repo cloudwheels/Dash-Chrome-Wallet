@@ -4,6 +4,8 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <title>Dash Chrome-Wallet</title>
+  <!-- Add icon library -->
+  <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 
 <body>
@@ -13,36 +15,30 @@
     <tbody>
 
       <tr>
-        <td style="vertical-align: top; text-align: left;"><button
-            style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);" id="createBtn">Create
-            Wallet</button>Address: <textarea style="width: 260px; height: 25px;" readonly="readonly" cols="1" rows="1"
+        <td style="vertical-align: top; text-align: left;"><button class="buttonload" id="createBtn">
+            Create Wallet <i id="spinnerCreateWallet" class="fa fa-refresh fa-spin" style="display:none"></i></button>
+          <br />Address:<br /></b><textarea style="width: 260px; height: 30px;" readonly="readonly" cols="1" rows="1"
             id="addressText"></textarea> </td>
-        <td style="vertical-align: top;"><button style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);"
-            id="identityBtn">Create Identity</button><textarea style="width: 260px; height: 35px;" id="identityText"
-            readonly="readonly" cols="1" rows="1"></textarea></td>
-
-
-
+        <td style="vertical-align: top;"><button class="buttonload" id="identityBtn">Create Identity </button><textarea
+            style="width: 260px; height: 35px;" id="identityText" readonly="readonly" cols="1" rows="1"></textarea></td>
       </tr>
       <tr>
-        <td style="vertical-align: top; height: 2px; width: 2px;">Balance:
+        <td style="vertical-align: top; height: 2px; width: 2px;">Balance:<br />
           <textarea style="width: 100px; height: 20px;" readonly="readonly" cols="1" rows="1"
-            id="balanceText"></textarea> <button style="width: 100px; height: 25px;" id="balanceBtn"
-            type="button">Refresh</button>
+            id="balanceText"></textarea><br /> <button class="buttonload" id="balanceBtn" type="button">Refresh <i
+              id="spinnerRefreshBalance" class="fa fa-refresh fa-spin" style="display:none"></i></button>
         </td>
 
         <td style="vertical-align: top;"><textarea style="width: 260px; height: 25px;" id="nameText" cols="1"
-            rows="1"></textarea><button style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);"
-            id="nameBtn">Register Name</button>
+            rows="1"></textarea><button class="buttonload" id="nameBtn">Register Name </button>
         </td>
-
-
       </tr>
       <tr>
-        <td style="vertical-align: top;"><button style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);"
-            id="sendBtn">Send</button> <textarea style="width: 50px; height: 25px;" cols="1" rows="1"
-            id="amountText"></textarea>
-          DASH to address<textarea style="width: 260px; height: 40px;" cols="0" rows="0" id="toAddressText"></textarea>
+        <td style="vertical-align: top;"><button class="buttonload" id="sendBtn">Send <i id="spinnerSend"
+              class="fa fa-refresh fa-spin" style="display:none"></i></button><br /><textarea
+            style="width: 50px; height: 25px;" cols="1" rows="1" id="amountText"></textarea>
+          DASH to address:<br /><textarea style="width: 260px; height: 40px;" cols="0" rows="0"
+            id="toAddressText"></textarea>
         </td>
 
         <td style="vertical-align: top;">
@@ -53,34 +49,28 @@
           </select>
           Record Locator:<textarea style="width: 260px; height: 25px;" cols="1" rows="1"
             id="recordLocatorText"></textarea>Query Object:<textarea style="width: 260px; height: 50px;" cols="1"
-            rows="1" id="queryObjectText"></textarea><button
-            style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);" id="getDocumentsBtn">Retrieve
-            Documents</button>
+            rows="1" id="queryObjectText"></textarea><button class="buttonload" id="getDocumentsBtn">Retrieve
+            Documents <i id="spinnerGetDocs" class="fa fa-refresh fa-spin" style="display:none"></button>
         </td>
       </tr>
       <tr>
         <td style="vertical-align: top; height: 2px; width: 2px;">Mnemonic:
           <textarea style="width: 260px; height: 50px;" cols="1" rows="1" id="mnemonicText"></textarea> <button
-            style="width: 260px; height: 25px;" id="mnemonicBtn" type="button">Import
-            Mnemonic</button></td>
+            class="buttonload" id="mnemonicBtn" type="button">Import
+            Mnemonic <i id="spinnerImportMnemonic" class="fa fa-refresh fa-spin" style="display:none"></button></td>
 
         <td style="vertical-align: top; height: 2px; width: 2px;">Id:<textarea style="width: 260px; height: 50px;"
-            cols="1" rows="1" id="contractText"></textarea><button
-            style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);" id="getContractBtn">Retrieve
-            Contract</button>
+            cols="1" rows="1" id="contractText"></textarea><button class="buttonload" id="getContractBtn">Retrieve
+            Contract <i id="spinnerGetContract" class="fa fa-refresh fa-spin" style="display:none"></button>
         </td>
 
       </tr>
       <tr>
-        <td style="vertical-align: top;"><button style="width: 160px; height: 25px; background-color: rgb(0, 141, 228);"
-            type="button" id="connectBtn">Test Connection</button></td>
+        <td style="vertical-align: top;"><button class="buttonload" type="button" id="connectBtn">Test Connection <i
+              id="spinnerTestConnection" class="fa fa-refresh fa-spin" style="display:none"></button></td>
         <td style="vertical-align: top;"><br>
         </td>
-
       </tr>
-
-
-
 
     </tbody>
   </table>
